@@ -12,7 +12,6 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
         }
 
         body {
@@ -65,7 +64,7 @@
             box-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
         }
 
-        /* REAL VAPE ANIMATION CORRIDOR SLIDER */
+        /* PHOTO ANIMATION CORRIDOR SLIDER */
         .slider-container {
             width: 100%;
             overflow: hidden;
@@ -90,6 +89,7 @@
             overflow: hidden;
             border: 2px solid #ff007f;
             box-shadow: 0 0 15px rgba(255, 0, 127, 0.3);
+            background: #150f24;
         }
 
         .slide-item img {
@@ -100,7 +100,7 @@
 
         @keyframes scrollHorizontal {
             0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-280px * 6)); }
+            100% { transform: translateX(calc(-280px * 5)); }
         }
 
         /* HERO TEXT */
@@ -167,18 +167,29 @@
             border-radius: 16px;
             overflow: hidden;
             margin-bottom: 15px;
-            background: #090611;
+            background: #251b3d;
             border: 1px solid #3c2a66;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
         }
 
         .img-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
         }
 
-        .product-card:hover .img-container img { transform: scale(1.1); }
+        .img-fallback-icon {
+            font-size: 50px;
+            color: rgba(255, 255, 255, 0.2);
+            z-index: 1;
+        }
 
         .product-card h3 { font-size: 19px; font-weight: 700; margin-bottom: 4px; color: #fff; }
         .product-card p { font-size: 12px; color: #a496bd; margin-bottom: 14px; }
@@ -219,7 +230,7 @@
             color: #000 !important;
         }
 
-        /* FIXED CORNER CIRCLE BUTTONS WITH LABELS FOR SAFETY */
+        /* FIXED CORNER CIRCLE BUTTONS */
         .floating-action-group {
             position: fixed;
             bottom: 25px;
@@ -248,36 +259,6 @@
         .btn-whatsapp { background: #25d366; border: 2px solid #fff; }
         .circle-btn:hover { transform: scale(1.15); }
 
-        /* MODAL */
-        .login-modal {
-            display: none;
-            position: fixed;
-            z-index: 999999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(3, 2, 7, 0.9);
-            justify-content: center;
-            align-items: center;
-            backdrop-filter: blur(10px);
-        }
-        .modal-content {
-            background: #110b21;
-            border: 2px solid #ff007f;
-            padding: 35px 25px;
-            border-radius: 24px;
-            width: 90%;
-            max-width: 360px;
-            text-align: center;
-            position: relative;
-        }
-        .close-btn { position: absolute; top: 12px; right: 18px; color: #8c7fa6; font-size: 26px; cursor: pointer; }
-        .input-group { display: flex; align-items: center; background: #1a1230; border: 1px solid #3c2a66; border-radius: 12px; margin-bottom: 16px; padding: 12px 15px; }
-        .input-group input { background: transparent; border: none; color: #fff; outline: none; width: 100%; font-size: 14px; }
-        .input-group i { color: #00f2fe; margin-right: 12px; }
-        .modal-submit-btn { width: 100%; background: linear-gradient(45deg, #ff007f, #ffcc00); color: #fff; font-weight: 700; border: none; padding: 14px; border-radius: 12px; cursor: pointer; }
-
         @media (max-width: 768px) {
             .products-grid {
                 grid-template-columns: repeat(2, 1fr) !important;
@@ -293,21 +274,19 @@
 </head>
 <body>
 
-    <!-- Header Section -->
     <header class="header">
         <div class="logo-text">VIP VAPE LOUNGE</div>
-        <button class="login-btn" onclick="openLogin()">Login</button>
+        <button class="login-btn">Login</button>
     </header>
 
-    <!-- Moving Corridor Animation Slider with Real High Quality Vape/Smoke Smoke Images -->
+    <!-- Moving Slider (Exact matching your uploaded .jpg files) -->
     <div class="slider-container">
         <div class="slider-track">
-            <div class="slide-item"><img src="https://images.unsplash.com/photo-1556942040-d99616d25203?w=500&auto=format&fit=crop" alt="Vape Mod"></div>
-            <div class="slide-item"><img src="https://images.unsplash.com/photo-1536637841950-b0ef5fa580bc?w=500&auto=format&fit=crop" alt="E-Cigarette"></div>
-            <div class="slide-item"><img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=500&auto=format&fit=crop" alt="Vape Smoke Close Up"></div>
-            <div class="slide-item"><img src="https://images.unsplash.com/photo-1518173946687-a4c8a3b1f98e?w=500&auto=format&fit=crop" alt="Thick Neon Smoke"></div>
-            <div class="slide-item"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&auto=format&fit=crop" alt="Vaping Device"></div>
-            <div class="slide-item"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&auto=format&fit=crop" alt="Premium Pod Mod"></div>
+            <div class="slide-item"><img src="IMG-20260718-WA0057.jpg" alt="Vape"></div>
+            <div class="slide-item"><img src="IMG-20260718-WA0058.jpg" alt="Vape"></div>
+            <div class="slide-item"><img src="IMG-20260718-WA0059.jpg" alt="Vape"></div>
+            <div class="slide-item"><img src="IMG-20260718-WA0060.jpg" alt="Vape"></div>
+            <div class="slide-item"><img src="IMG-20260718-WA0061.jpg" alt="Vape"></div>
         </div>
     </div>
 
@@ -316,7 +295,6 @@
         <p>Premium Luxury Flavor • Fast Cash On Delivery</p>
     </section>
 
-    <!-- Products Grid Section -->
     <section class="products-section">
         <div class="products-grid">
             
@@ -324,72 +302,52 @@
             <div class="product-card">
                 <span class="badge">COD Available</span>
                 <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1556942040-d99616d25203?w=400&auto=format&fit=crop" alt="Crystal Pro Ice">
+                    <i class="fas fa-wind img-fallback-icon"></i>
+                    <img src="IMG-20260718-WA0057.jpg" alt="Crystal Pro Ice">
                 </div>
                 <h3>Crystal Pro Ice</h3>
                 <p>Smooth Rich Ice Blast</p>
                 <div class="price">₹1599</div>
-                <a href="https://wa.me/919996488904?text=Hi, I want to order Crystal Pro Ice (₹1599)" target="_blank" class="order-btn">Order Now</a>
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Crystal Pro Ice" target="_blank" class="order-btn">Order Now</a>
             </div>
 
             <!-- Product 2 -->
             <div class="product-card">
                 <span class="badge">Trending Now</span>
                 <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1536637841950-b0ef5fa580bc?w=400&auto=format&fit=crop" alt="Black Gold Turbo">
+                    <i class="fas fa-bolt img-fallback-icon"></i>
+                    <img src="IMG-20260718-WA0058.jpg" alt="Black Gold Turbo">
                 </div>
                 <h3>Black Gold Turbo</h3>
                 <p>Intense Thick Clouds</p>
                 <div class="price">₹1750</div>
-                <a href="https://wa.me/919996488904?text=Hi, I want to order Black Gold Turbo (₹1750)" target="_blank" class="order-btn">Order Now</a>
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Black Gold Turbo" target="_blank" class="order-btn">Order Now</a>
             </div>
 
             <!-- Product 3 -->
             <div class="product-card">
                 <span class="badge">New Flavour</span>
                 <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=400&auto=format&fit=crop" alt="Cyber Pod X">
+                    <i class="fas fa-cloud img-fallback-icon"></i>
+                    <img src="IMG-20260718-WA0059.jpg" alt="Cyber Pod X">
                 </div>
                 <h3>Cyber Pod X</h3>
                 <p>Futuristic Long Lasting</p>
                 <div class="price">₹1699</div>
-                <a href="https://wa.me/919996488904?text=Hi, I want to order Cyber Pod X (₹1699)" target="_blank" class="order-btn">Order Now</a>
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Cyber Pod X" target="_blank" class="order-btn">Order Now</a>
             </div>
 
             <!-- Product 4 -->
             <div class="product-card">
                 <span class="badge">Top Rated</span>
                 <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1518173946687-a4c8a3b1f98e?w=400&auto=format&fit=crop" alt="Ultra Max Extreme">
+                    <i class="fas fa-fire img-fallback-icon"></i>
+                    <img src="IMG-20260718-WA0060.jpg" alt="Ultra Max Extreme">
                 </div>
                 <h3>Ultra Max Extreme</h3>
                 <p>Super Smooth Kick</p>
                 <div class="price">₹1850</div>
-                <a href="https://wa.me/919996488904?text=Hi, I want to order Ultra Max Extreme (₹1850)" target="_blank" class="order-btn">Order Now</a>
-            </div>
-
-            <!-- Product 5 -->
-            <div class="product-card">
-                <span class="badge">100% Original</span>
-                <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&auto=format&fit=crop" alt="Mint Storm Premium">
-                </div>
-                <h3>Mint Storm Premium</h3>
-                <p>Pure Fresh Minty Rush</p>
-                <div class="price">₹1550</div>
-                <a href="https://wa.me/919996488904?text=Hi, I want to order Mint Storm Premium (₹1550)" target="_blank" class="order-btn">Order Now</a>
-            </div>
-
-            <!-- Product 6 -->
-            <div class="product-card">
-                <span class="badge">VIP Luxury</span>
-                <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&auto=format&fit=crop" alt="Royal Velvet Edition">
-                </div>
-                <h3>Royal Velvet Edition</h3>
-                <p>Premium Glossy Finish</p>
-                <div class="price">₹1950</div>
-                <a href="https://wa.me/919996488904?text=Hi, I want to order Royal Velvet Edition (₹1950)" target="_blank" class="order-btn">Order Now</a>
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Ultra Max Extreme" target="_blank" class="order-btn">Order Now</a>
             </div>
 
         </div>
@@ -397,27 +355,10 @@
 
     <!-- FLOATING ACTION GROUP (CIRCLE CORNER BUTTONS) -->
     <div class="floating-action-group">
-        <a href="tel:+919996488904" class="circle-btn btn-call" title="Call Us"><i class="fas fa-phone-alt"></i></a>
-        <a href="https://wa.me/919996488904" target="_blank" class="circle-btn btn-whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:+919996488904" class="circle-btn btn-call"><i class="fas fa-phone-alt"></i></a>
+        <a href="https://wa.me/919996488904" target="_blank" class="circle-btn btn-whatsapp"><i class="fab fa-whatsapp"></i></a>
     </div>
 
-    <!-- LOGIN MODAL -->
-    <div id="loginModal" class="login-modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeLogin()">&times;</span>
-            <h2>Welcome Back</h2>
-            <form onsubmit="handleLogin(event)">
-                <div class="input-group"><i class="fas fa-phone-alt"></i><input type="tel" placeholder="Mobile" required pattern="[0-9]{10}"></div>
-                <div class="input-group"><i class="fas fa-lock"></i><input type="password" placeholder="Password" required></div>
-                <button type="submit" class="modal-submit-btn">Login Now</button>
-            </form>
-        </div>
-    </div>
-
-    <script>
-        function openLogin() { document.getElementById("loginModal").style.display = "flex"; }
-        function closeLogin() { document.getElementById("loginModal").style.display = "none"; }
-        function handleLogin(e) { e.preventDefault(); closeLogin(); document.querySelector(".login-btn").innerText = "Hi, User"; }
-    </script>
 </body>
 </html>
+ 
