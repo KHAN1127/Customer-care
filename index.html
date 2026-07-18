@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
-        /* VIP Global Theme Styles */
         * {
             margin: 0;
             padding: 0;
@@ -17,126 +16,80 @@
         }
 
         body {
-            background-color: #050505;
+            background-color: #070708;
             color: #ffffff;
             overflow-x: hidden;
         }
 
-        /* Premium Header */
+        /* COLORFUL & VIP HEADER */
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 8%;
-            background: rgba(10, 10, 10, 0.95);
-            border-bottom: 1px solid #1a1a1a;
+            background: rgba(15, 15, 15, 0.95);
+            border-bottom: 2px solid #ffcc00;
+            box-shadow: 0 0 15px rgba(255, 204, 0, 0.2);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
         .logo-text {
-            font-size: 24px;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            display: flex;
-            align-items: center;
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, #ffcc00, #ff3366);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(255, 51, 102, 0.3);
         }
 
-        .logo-text span { color: #ffcc00; }
-
-        header nav a {
-            color: #aaaaaa;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 600;
-            font-size: 15px;
-            transition: 0.3s;
-        }
-
-        header nav a:hover, header nav a.active { color: #ffcc00; }
-
+        /* WORKING LOGIN BUTTON WITH NEON EFFECT */
         .login-btn {
-            background: #4a2711;
-            color: #fff;
-            padding: 10px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
-            border: 1px solid transparent;
+            background: linear-gradient(45deg, #ff3366, #ffcc00);
+            color: #000;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 700;
+            border: none;
             cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 204, 0, 0.4);
+            transition: 0.3s ease;
         }
 
-        .login-btn:hover { background: #ffcc00; color: #000; }
+        .login-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 51, 102, 0.6);
+            color: #fff;
+        }
 
-        /* VIP Title Branding */
+        /* GLOWING HERO SECTION */
         .hero-text-section {
             text-align: center;
-            padding: 40px 8% 20px 8%;
-            background: radial-gradient(circle at top, rgba(255,204,0,0.06), transparent 60%);
+            padding: 50px 8% 30px 8%;
+            background: radial-gradient(circle at top, rgba(255, 51, 102, 0.15), rgba(255, 204, 0, 0.05), transparent 70%);
         }
 
-        .hero-text-section h1 { font-size: 42px; font-weight: 700; line-height: 1.2; }
-        .highlight-text { color: #ffcc00; }
-        .hero-text-section p { color: #888; font-size: 15px; margin-top: 10px; }
-
-        /* VIP AUTOMATIC SCROLLING BANNER */
-        .slider-container {
-            width: 100%;
-            overflow: hidden;
-            background: #0a0a0a;
-            padding: 20px 0;
-            border-top: 1px solid #111;
-            border-bottom: 1px solid #111;
+        .hero-text-section h1 {
+            font-size: 46px;
+            font-weight: 800;
+            line-height: 1.2;
+            background: linear-gradient(to right, #ffcc00, #ff3366, #00ffcc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .slider-track {
-            display: flex;
-            width: calc(250px * 10);
-            animation: scroll-left 20s linear infinite;
-            gap: 20px;
+        .hero-text-section p {
+            color: #bbb;
+            font-size: 16px;
+            margin-top: 10px;
+            letter-spacing: 1px;
         }
 
-        .slider-track:hover { animation-play-state: paused; }
-
-        .slide-item {
-            width: 250px;
-            height: 160px;
-            flex-shrink: 0;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid #222;
-        }
-
-        .slide-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
-
-        @keyframes scroll-left {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-250px * 5 - 100px)); }
-        }
-
-        /* Trust Badges Features */
-        .cards-features {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 25px 8%;
-            background: #050505;
-            border-bottom: 1px solid #111;
-            margin-bottom: 30px;
-        }
-
-        .feature-card { display: flex; align-items: center; gap: 15px; }
-        .icon-yellow { color: #ffcc00; font-size: 26px; }
-        .feature-card h3 { font-size: 15px; font-weight: 600; }
-        .feature-card p { font-size: 12px; color: #666; }
-        .feature-separator { width: 1px; height: 35px; background: #222; }
-
-        /* VIP Grid Setup */
-        .products-section { padding: 20px 8%; text-align: center; }
-        .section-title { font-size: 32px; font-weight: 700; margin-bottom: 5px; }
-        .section-subtitle { color: #666; margin-bottom: 40px; font-size: 15px; }
+        /* COLORFUL PRODUCTS GRID (STRICT 2 PER ROW ON MOBILE) */
+        .products-section { padding: 30px 8%; text-align: center; }
+        .section-title { font-size: 32px; font-weight: 700; margin-bottom: 30px; color: #fff; }
 
         .products-grid {
             display: grid;
@@ -145,104 +98,89 @@
         }
 
         .product-card {
-            background: #0a0a0a;
-            border: 1px solid #151515;
-            border-radius: 16px;
+            background: #121214;
+            border: 1px solid #222;
+            border-radius: 20px;
             padding: 15px;
             text-align: left;
             position: relative;
-            transition: 0.3s;
+            transition: 0.4s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
-        .product-card:hover { border-color: #4a2711; transform: translateY(-5px); }
-        .badge { position: absolute; top: 12px; right: 12px; background: #4a2711; color: #fff; padding: 4px 10px; font-size: 11px; font-weight: 700; border-radius: 6px; z-index: 10; }
-        .img-container { width: 100%; height: 200px; border-radius: 12px; overflow: hidden; margin-bottom: 15px; background: #111; }
-        .img-container img { width: 100%; height: 100%; object-fit: cover; }
-        .product-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; color: #fff; }
-        .product-card p { font-size: 12px; color: #666; margin-bottom: 12px; }
-        .price { font-size: 20px; font-weight: 700; color: #ffcc00; margin-bottom: 12px; }
+        /* Colorful Hover Border Glow Effects */
+        .product-card:nth-child(odd):hover { border-color: #ffcc00; box-shadow: 0 0 20px rgba(255, 204, 0, 0.25); transform: translateY(-5px); }
+        .product-card:nth-child(even):hover { border-color: #ff3366; box-shadow: 0 0 20px rgba(255, 51, 102, 0.25); transform: translateY(-5px); }
 
+        .badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: linear-gradient(45deg, #ff3366, #ff6600);
+            color: #fff;
+            padding: 4px 12px;
+            font-size: 11px;
+            font-weight: 700;
+            border-radius: 8px;
+            z-index: 10;
+        }
+
+        .img-container {
+            width: 100%;
+            height: 200px;
+            border-radius: 14px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            background: #1a1a1a;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .product-card:hover .img-container img { transform: scale(1.08); }
+
+        .product-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 5px; color: #fff; }
+        .product-card p { font-size: 12px; color: #aaa; margin-bottom: 12px; }
+        
+        /* Colorful Price Tag */
+        .price {
+            font-size: 22px;
+            font-weight: 800;
+            background: linear-gradient(45deg, #ffcc00, #00ffcc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+
+        /* Gradient Order Button */
         .order-btn {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 8px;
-            background: transparent;
-            border: 1px solid #4a2711;
-            color: #ffcc00;
+            background: linear-gradient(90deg, #ffcc00, #ff9900);
+            color: #000;
             text-decoration: none;
-            padding: 10px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 13px;
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 14px;
             transition: 0.3s;
             width: 100%;
+            box-shadow: 0 4px 10px rgba(255, 153, 0, 0.2);
         }
 
-        .order-btn:hover { background: #4a2711; color: #fff; }
-
-        /* Contact Box */
-        .contact-box-container { padding: 40px 8%; }
-        .contact-section {
-            background: linear-gradient(135deg, #0a0a0a 0%, #111111 100%);
-            border: 1px solid #222;
-            padding: 40px;
-            border-radius: 20px;
-            text-align: center;
+        .order-btn:hover {
+            background: linear-gradient(90deg, #ff3366, #ff6600);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255, 51, 102, 0.4);
         }
 
-        /* Footer */
-        .footer { background: #050505; border-top: 1px solid #111; padding: 50px 8% 20px 8%; }
-        .footer-container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; margin-bottom: 30px; }
-        .footer-about { max-width: 300px; }
-        .footer-about p { color: #555; font-size: 13px; margin-top: 12px; line-height: 1.6; }
-        .footer-links h3, .footer-social h3 { font-size: 16px; margin-bottom: 15px; color: #ffcc00; }
-        .footer-links a { display: block; color: #555; text-decoration: none; font-size: 14px; margin-bottom: 8px; transition: 0.3s; }
-        .footer-links a:hover { color: #fff; }
-
-        .social-icons a {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 38px;
-            height: 38px;
-            background: #111;
-            color: #666;
-            border-radius: 50%;
-            margin-right: 10px;
-            transition: 0.3s;
-        }
-        .social-icons a:hover { background: #ffcc00; color: #000; }
-        .footer-bottom { border-top: 1px solid #111; padding-top: 20px; text-align: center; color: #333; font-size: 12px; }
-
-        /* FLOATING SIDE ACTION BUTTONS */
-        .floating-buttons-container {
-            position: fixed;
-            bottom: 25px;
-            right: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            z-index: 9999;
-        }
-        .float-btn {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 54px;
-            height: 54px;
-            border-radius: 50%;
-            color: #ffffff;
-            font-size: 22px;
-            text-decoration: none;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-            transition: transform 0.3s ease;
-        }
-        .float-btn:hover { transform: scale(1.1); }
-        .float-whatsapp { background-color: #25d366; }
-        .float-call { background-color: #ffcc00; color: #000; }
-
-        /* LOGIN POPUP MODAL (100% WORKING STYLE) */
+        /* 100% WORKING MODAL POPUP */
         .login-modal {
             display: none;
             position: fixed;
@@ -254,55 +192,47 @@
             background-color: rgba(0, 0, 0, 0.85);
             justify-content: center;
             align-items: center;
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(8px);
         }
         .modal-content {
-            background: #0d0d0d;
-            border: 1px solid #4a2711;
+            background: #0f0f12;
+            border: 2px solid #ffcc00;
+            box-shadow: 0 0 25px rgba(255, 204, 0, 0.3);
             padding: 35px 25px;
-            border-radius: 16px;
+            border-radius: 20px;
             width: 90%;
             max-width: 360px;
             text-align: center;
             position: relative;
         }
         .modal-content h2 { font-size: 24px; color: #fff; font-weight: 700; margin-bottom: 5px; }
-        .modal-content p { color: #555; font-size: 13px; margin-bottom: 25px; }
-        .close-btn { position: absolute; top: 12px; right: 18px; color: #555; font-size: 26px; cursor: pointer; }
-        .close-btn:hover { color: #ffcc00; }
-        .input-group { display: flex; align-items: center; background: #121212; border: 1px solid #222; border-radius: 8px; margin-bottom: 15px; padding: 12px 15px; }
+        .modal-content p { color: #888; font-size: 13px; margin-bottom: 25px; }
+        .close-btn { position: absolute; top: 12px; right: 18px; color: #888; font-size: 26px; cursor: pointer; }
+        .close-btn:hover { color: #ff3366; }
+        .input-group { display: flex; align-items: center; background: #17171a; border: 1px solid #333; border-radius: 10px; margin-bottom: 15px; padding: 12px 15px; }
         .input-group input { background: transparent; border: none; color: #fff; outline: none; width: 100%; font-size: 14px; }
         .input-group i { color: #ffcc00; margin-right: 12px; }
-        .modal-submit-btn { width: 100%; background: #ffcc00; color: #000; border: none; padding: 13px; border-radius: 8px; font-weight: 700; cursor: pointer; transition: 0.3s; }
-        .modal-submit-btn:hover { background: #fff; }
+        .modal-submit-btn { width: 100%; background: linear-gradient(45deg, #ffcc00, #ff3366); color: #000; font-weight: 700; border: none; padding: 13px; border-radius: 10px; cursor: pointer; transition: 0.3s; }
+        .modal-submit-btn:hover { color: #fff; transform: scale(1.02); }
 
-        /* MOBILE VIEW GRID (STRICTLY 2 ITEMS SIDE BY SIDE) */
+        /* MOBILE VIEW OPTIMIZATION (STRICT 2 PRODUCTS PER ROW) */
         @media (max-width: 768px) {
             .header { padding: 15px 5%; }
-            header nav { display: none; }
+            .hero-text-section h1 { font-size: 32px; }
             
-            .hero-text-section h1 { font-size: 30px; }
-            .slide-item { width: 180px; height: 120px; }
-
-            .cards-features { flex-direction: column; gap: 15px; padding: 20px 5%; }
-            .feature-separator { display: none; }
-
             .products-grid {
                 grid-template-columns: repeat(2, 1fr) !important;
                 gap: 12px !important;
+                padding: 5px;
             }
             
-            .product-card { padding: 10px; border-radius: 12px; }
-            .img-container { height: 130px; border-radius: 8px; margin-bottom: 8px; }
-            .product-card h3 { font-size: 13px; margin-bottom: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-            .product-card p { font-size: 10px; margin-bottom: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-            .price { font-size: 15px; margin-bottom: 6px; }
+            .product-card { padding: 10px; border-radius: 14px; }
+            .img-container { height: 135px; border-radius: 10px; margin-bottom: 8px; }
+            .product-card h3 { font-size: 14px; font-weight:600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+            .product-card p { font-size: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+            .price { font-size: 16px; margin-bottom: 8px; }
             .badge { top: 8px; right: 8px; padding: 2px 6px; font-size: 9px; }
-            .order-btn { padding: 8px; font-size: 11px; border-radius: 6px; }
-
-            .footer-container { flex-direction: column; text-align: center; }
-            .floating-buttons-container { bottom: 20px; right: 15px; gap: 10px; }
-            .float-btn { width: 48px; height: 48px; font-size: 18px; }
+            .order-btn { padding: 8px; font-size: 12px; border-radius: 8px; }
         }
     </style>
 </head>
@@ -310,181 +240,136 @@
 
     <!-- Header Section -->
     <header class="header">
-        <div class="logo">
-            <div class="logo-text"><i class="fas fa-wind" style="color: #ffcc00; margin-right: 5px;"></i><span>VIP</span> VAPE</div>
-        </div>
-        <nav>
-            <a href="#" class="active">Home</a>
-            <a href="#products">Products</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <div class="logo-text">VIP VAPE SHOP</div>
         <button class="login-btn" onclick="openLogin()">Login</button>
     </header>
 
-    <!-- Top Branding Title -->
+    <!-- Hero Section -->
     <section class="hero-text-section">
-        <h1>Premium Vape <span class="highlight-text">VIP Collection</span></h1>
-        <p>Top Quality • Best Flavours • Trusted Original Shop</p>
+        <h1>Premium VIP Vape Deals</h1>
+        <p>100% Original Premium Quality • Fast India Delivery</p>
     </section>
 
-    <!-- AUTO-SCROLLING VAPE BANNER SLIDER -->
-    <div class="slider-container">
-        <div class="slider-track">
-            <div class="slide-item"><img src="IMG-20260718-WA0057.jpg" alt="Vape 1"></div>
-            <div class="slide-item"><img src="IMG-20260718-WA0058.jpg" alt="Vape 2"></div>
-            <div class="slide-item"><img src="IMG-20260718-WA0059.jpg" alt="Vape 3"></div>
-            <div class="slide-item"><img src="IMG-20260718-WA0060.jpg" alt="Vape 4"></div>
-            <div class="slide-item"><img src="IMG-20260718-WA0061.jpg" alt="Vape 5"></div>
-            <!-- Duplicates for Loop Continuity -->
-            <div class="slide-item"><img src="IMG-20260718-WA0057.jpg" alt="Vape 1"></div>
-            <div class="slide-item"><img src="IMG-20260718-WA0058.jpg" alt="Vape 2"></div>
-            <div class="slide-item"><img src="IMG-20260718-WA0059.jpg" alt="Vape 3"></div>
-            <div class="slide-item"><img src="IMG-20260718-WA0060.jpg" alt="Vape 4"></div>
-            <div class="slide-item"><img src="IMG-20260718-WA0061.jpg" alt="Vape 5"></div>
-        </div>
-    </div>
-
-    <!-- Trust Features Section -->
-    <section class="cards-features">
-        <div class="feature-card">
-            <i class="fas fa-shield-alt icon-yellow"></i>
-            <div><h3>100% Original</h3><p>Genuine Products</p></div>
-        </div>
-        <div class="feature-separator"></div>
-        <div class="feature-card">
-            <i class="fas fa-bolt icon-yellow"></i>
-            <div><h3>Fast Delivery</h3><p>Across India</p></div>
-        </div>
-        <div class="feature-separator"></div>
-        <div class="feature-card">
-            <i class="fas fa-headset icon-yellow"></i>
-            <div><h3>24×7 Support</h3><p>Always Available</p></div>
-        </div>
-    </section>
-
-    <!-- Best Selling Deals Section (Strict 2 Items Per Row on Mobile) -->
+    <!-- Best Selling Section with Exact .jpeg Images -->
     <section id="products" class="products-section">
-        <h2 class="section-title">🔥 Best Selling Deals</h2>
-        <p class="section-subtitle">Limited Time Premium Offers</p>
-
         <div class="products-grid">
             
-            <!-- Card 1 -->
+            <!-- Product 1 (WA0057) -->
             <div class="product-card">
-                <span class="badge">VIP</span>
-                <div class="img-container"><img src="IMG-20260718-WA0057.jpg" alt="Vape Product"></div>
-                <h3>Crystal Pro Max</h3>
+                <span class="badge">COD Available</span>
+                <div class="img-container"><img src="IMG-20260718-WA0057.jpeg" alt="Crystal Pro Ice"></div>
+                <h3>Crystal Pro Ice</h3>
                 <p>Smooth Rich Ice Blast</p>
                 <div class="price">₹1599</div>
-                <a href="https://wa.me/919996488904?text=Hi,%20I%20want%20to%20order%20Crystal%20Pro%20Max%20(₹1599)" target="_blank" class="order-btn">
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Crystal Pro Ice (₹1599)" target="_blank" class="order-btn">
                     <i class="fas fa-shopping-cart"></i> Order Now
                 </a>
             </div>
 
-            <!-- Card 2 -->
+            <!-- Product 2 (WA0058) -->
             <div class="product-card">
-                <span class="badge">VIP</span>
-                <div class="img-container"><img src="IMG-20260718-WA0058.jpg" alt="Vape Product"></div>
-                <h3>Black Edition Gold</h3>
-                <p>Intense Clouds Edition</p>
+                <span class="badge">Best Seller</span>
+                <div class="img-container"><img src="IMG-20260718-WA0058.jpeg" alt="Black Gold Turbo"></div>
+                <h3>Black Gold Turbo</h3>
+                <p>Intense Thick Clouds</p>
                 <div class="price">₹1750</div>
-                <a href="https://wa.me/919996488904?text=Hi,%20I%20want%20to%20order%20Black%20Edition%20Gold%20(₹1750)" target="_blank" class="order-btn">
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Black Gold Turbo (₹1750)" target="_blank" class="order-btn">
                     <i class="fas fa-shopping-cart"></i> Order Now
                 </a>
             </div>
 
-            <!-- Card 3 -->
+            <!-- Product 3 (WA0059) -->
             <div class="product-card">
-                <span class="badge">VIP</span>
-                <div class="img-container"><img src="IMG-20260718-WA0059.jpg" alt="Vape Product"></div>
-                <h3>Cyber Vape X</h3>
+                <span class="badge">New Release</span>
+                <div class="img-container"><img src="IMG-20260718-WA0059.jpeg" alt="Cyber Pod X"></div>
+                <h3>Cyber Pod X</h3>
                 <p>Futuristic Long Lasting</p>
                 <div class="price">₹1699</div>
-                <a href="https://wa.me/919996488904?text=Hi,%20I%20want%20to%20order%20Cyber%20Vape%20X%20(₹1699)" target="_blank" class="order-btn">
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Cyber Pod X (₹1699)" target="_blank" class="order-btn">
                     <i class="fas fa-shopping-cart"></i> Order Now
                 </a>
             </div>
 
-            <!-- Card 4 -->
+            <!-- Product 4 (WA0060) -->
             <div class="product-card">
-                <span class="badge">VIP</span>
-                <div class="img-container"><img src="IMG-20260718-WA0060.jpg" alt="Vape Product"></div>
-                <h3>Ultra Pod Extreme</h3>
+                <span class="badge">Top Rated</span>
+                <div class="img-container"><img src="IMG-20260718-WA0060.jpeg" alt="Ultra Max Extreme"></div>
+                <h3>Ultra Max Extreme</h3>
                 <p>Super Smooth Kick</p>
                 <div class="price">₹1850</div>
-                <a href="https://wa.me/919996488904?text=Hi,%20I%20want%20to%20order%20Ultra%20Pod%20Extreme%20(₹1850)" target="_blank" class="order-btn">
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Ultra Max Extreme (₹1850)" target="_blank" class="order-btn">
                     <i class="fas fa-shopping-cart"></i> Order Now
                 </a>
             </div>
 
-            <!-- Card 5 -->
+            <!-- Product 5 (WA0061) -->
             <div class="product-card">
-                <span class="badge">VIP</span>
-                <div class="img-container"><img src="IMG-20260718-WA0061.jpg" alt="Vape Product"></div>
-                <h3>Classic Mint Storm</h3>
-                <p>Pure Fresh Refreshing</p>
+                <span class="badge">100% Original</span>
+                <div class="img-container"><img src="IMG-20260718-WA0061.jpeg" alt="Mint Storm Premium"></div>
+                <h3>Mint Storm Premium</h3>
+                <p>Pure Fresh Minty Rush</p>
                 <div class="price">₹1550</div>
-                <a href="https://wa.me/919996488904?text=Hi,%20I%20want%20to%20order%20Classic%20Mint%20Storm%20(₹1550)" target="_blank" class="order-btn">
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Mint Storm Premium (₹1550)" target="_blank" class="order-btn">
                     <i class="fas fa-shopping-cart"></i> Order Now
                 </a>
             </div>
 
-            <!-- Card 6 -->
+            <!-- Product 6 (WA0062) -->
             <div class="product-card">
-                <span class="badge">VIP</span>
-                <div class="img-container"><img src="IMG-20260718-WA0062.jpg" alt="Vape Product"></div>
-                <h3>Royal Velvet Pod</h3>
-                <p>Premium Luxury Finish</p>
+                <span class="badge">VIP Luxury</span>
+                <div class="img-container"><img src="IMG-20260718-WA0062.jpeg" alt="Royal Velvet Edition"></div>
+                <h3>Royal Velvet Edition</h3>
+                <p>Premium Glossy Finish</p>
                 <div class="price">₹1950</div>
-                <a href="https://wa.me/919996488904?text=Hi,%20I%20want%20to%20order%20Royal%20Velvet%20Pod%20(₹1950)" target="_blank" class="order-btn">
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Royal Velvet Edition (₹1950)" target="_blank" class="order-btn">
                     <i class="fas fa-shopping-cart"></i> Order Now
                 </a>
             </div>
 
-            <!-- Card 7 -->
+            <!-- Product 7 (WA0063) -->
             <div class="product-card">
-                <span class="badge">VIP</span>
-                <div class="img-container"><img src="IMG-20260718-WA0063.jpg" alt="Vape Product"></div>
-                <h3>Titanium Smoke</h3>
-                <p>Heavy Duty Performance</p>
+                <span class="badge">Heavy Smoke</span>
+                <div class="img-container"><img src="IMG-20260718-WA0063.jpeg" alt="Titanium Smoke V4"></div>
+                <h3>Titanium Smoke V4</h3>
+                <p>Heavy Duty Beast Mode</p>
                 <div class="price">₹1899</div>
-                <a href="https://wa.me/919996488904?text=Hi,%20I%20want%20to%20order%20Titanium%20Smoke%20(₹1899)" target="_blank" class="order-btn">
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Titanium Smoke V4 (₹1899)" target="_blank" class="order-btn">
                     <i class="fas fa-shopping-cart"></i> Order Now
                 </a>
             </div>
 
-            <!-- Card 8 -->
+            <!-- Product 8 (WA0064) -->
             <div class="product-card">
-                <span class="badge">VIP</span>
-                <div class="img-container"><img src="IMG-20260718-WA0064.jpg" alt="Vape Product"></div>
-                <h3>Mystic Vapor Blue</h3>
-                <p>Exotic Fruit Blend</p>
+                <span class="badge">Exotic Flavor</span>
+                <div class="img-container"><img src="IMG-20260718-WA0064.jpeg" alt="Mystic Blue Vapor"></div>
+                <h3>Mystic Blue Vapor</h3>
+                <p>Delicious Mixed Fruit Juice</p>
                 <div class="price">₹1600</div>
-                <a href="https://wa.me/919996488904?text=Hi,%20I%20want%20to%20order%20Mystic%20Vapor%20Blue%20(₹1600)" target="_blank" class="order-btn">
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Mystic Blue Vapor (₹1600)" target="_blank" class="order-btn">
                     <i class="fas fa-shopping-cart"></i> Order Now
                 </a>
             </div>
 
-            <!-- Card 9 -->
+            <!-- Product 9 (WA0065) -->
             <div class="product-card">
-                <span class="badge">VIP</span>
-                <div class="img-container"><img src="IMG-20260718-WA0065.jpg" alt="Vape Product"></div>
-                <h3>Neon Blast Pod</h3>
-                <p>Ultimate Party Essential</p>
+                <span class="badge">Hot Deal</span>
+                <div class="img-container"><img src="IMG-20260718-WA0065.jpeg" alt="Neon Blast Pro"></div>
+                <h3>Neon Blast Pro</h3>
+                <p>Ultimate Vapor Control</p>
                 <div class="price">₹1799</div>
-                <a href="https://wa.me/919996488904?text=Hi,%20I%20want%20to%20order%20Neon%20Blast%20Pod%20(₹1799)" target="_blank" class="order-btn">
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Neon Blast Pro (₹1799)" target="_blank" class="order-btn">
                     <i class="fas fa-shopping-cart"></i> Order Now
                 </a>
             </div>
 
-            <!-- Card 10 -->
+            <!-- Product 10 (WA0066) -->
             <div class="product-card">
-                <span class="badge">VIP</span>
-                <div class="img-container"><img src="IMG-20260718-WA0066.jpg" alt="Vape Product"></div>
-                <h3>Magnum Turbo V2</h3>
-                <p>Maximum Power Control</p>
+                <span class="badge">VIP Choice</span>
+                <div class="img-container"><img src="IMG-20260718-WA0066.jpeg" alt="Magnum Pro Max V2"></div>
+                <h3>Magnum Pro Max V2</h3>
+                <p>High Performance Masterpiece</p>
                 <div class="price">₹1999</div>
-                <a href="https://wa.me/919996488904?text=Hi,%20I%20want%20to%20order%20Magnum%20Turbo%20V2%20(₹1999)" target="_blank" class="order-btn">
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Magnum Pro Max V2 (₹1999)" target="_blank" class="order-btn">
                     <i class="fas fa-shopping-cart"></i> Order Now
                 </a>
             </div>
@@ -492,47 +377,12 @@
         </div>
     </section>
 
-    <!-- Contact Info Section -->
-    <section id="contact" class="contact-box-container">
-        <div class="contact-section">
-            <h2>Need Help? <span class="highlight-text">Contact Us</span></h2>
-            <p>We are always here to help you!</p>
-            <p style="color:#ffcc00; font-weight:600; font-size:16px; margin-top:10px;">Call or WhatsApp: 9996488904</p>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-about">
-                <div class="logo-text"><i class="fas fa-wind" style="color: #ffcc00; margin-right: 5px;"></i><span>VIP</span> VAPE</div>
-                <p>Your trusted destination for premium vape products.<br>Shop original. Vape better.</p>
-            </div>
-            <div class="footer-social">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/ng8429073?igsh=enoxaXozaWZxazlu" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/919996488904" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 VIP Vape Shop. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <!-- SIDE FLOATING QUICK ACTION BUTTONS -->
-    <div class="floating-buttons-container">
-        <a href="tel:+919996488904" class="float-btn float-call" title="Call Us"><i class="fas fa-phone-alt"></i></a>
-        <a href="https://wa.me/919996488904" target="_blank" class="float-btn float-whatsapp" title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
-    </div>
-
-    <!-- 100% WORKING LOGIN POPUP MODAL -->
+    <!-- 100% WORKING LOGIN MODAL -->
     <div id="loginModal" class="login-modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeLogin()">&times;</span>
             <h2>Welcome Back</h2>
-            <p>Login to your Vape Shop account</p>
+            <p>Login to your VIP account</p>
             <form onsubmit="handleLogin(event)">
                 <div class="input-group">
                     <i class="fas fa-phone-alt"></i>
@@ -542,7 +392,7 @@
                     <i class="fas fa-lock"></i>
                     <input type="password" placeholder="Enter Password" required>
                 </div>
-                <button type="submit" class="modal-submit-btn">Login</button>
+                <button type="submit" class="modal-submit-btn">Login Now</button>
             </form>
         </div>
     </div>
