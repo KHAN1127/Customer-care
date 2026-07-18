@@ -18,7 +18,7 @@
             background: radial-gradient(circle at center, #0c0814 0%, #030207 100%);
             color: #ffffff;
             overflow-x: hidden;
-            padding-bottom: 100px;
+            padding-bottom: 120px;
         }
 
         /* PREMIUM DYNAMIC HEADER */
@@ -64,7 +64,7 @@
             box-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
         }
 
-        /* PHOTO ANIMATION CORRIDOR SLIDER */
+        /* PHOTO ANIMATION CORRIDOR SLIDER (All 10 Photos) */
         .slider-container {
             width: 100%;
             overflow: hidden;
@@ -76,8 +76,8 @@
 
         .slider-track {
             display: flex;
-            width: calc(280px * 12);
-            animation: scrollHorizontal 25s linear infinite;
+            width: calc(280px * 20);
+            animation: scrollHorizontal 35s linear infinite;
             gap: 20px;
         }
 
@@ -100,7 +100,7 @@
 
         @keyframes scrollHorizontal {
             0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-280px * 5)); }
+            100% { transform: translateX(calc(-280px * 10)); }
         }
 
         /* HERO TEXT */
@@ -145,8 +145,9 @@
         }
 
         .product-card:hover { transform: translateY(-8px); }
-        .product-card:nth-child(2n+1):hover { border-color: #ff007f; box-shadow: 0 0 20px rgba(255, 0, 127, 0.5); }
-        .product-card:nth-child(2n+2):hover { border-color: #00ffcc; box-shadow: 0 0 20px rgba(0, 255, 204, 0.5); }
+        .product-card:nth-child(3n+1):hover { border-color: #ff007f; box-shadow: 0 0 20px rgba(255, 0, 127, 0.5); }
+        .product-card:nth-child(3n+2):hover { border-color: #00ffcc; box-shadow: 0 0 20px rgba(0, 255, 204, 0.5); }
+        .product-card:nth-child(3n+3):hover { border-color: #ffcc00; box-shadow: 0 0 20px rgba(255, 204, 0, 0.5); }
 
         .badge {
             position: absolute;
@@ -163,7 +164,7 @@
 
         .img-container {
             width: 100%;
-            height: 200px;
+            height: 220px;
             border-radius: 16px;
             overflow: hidden;
             margin-bottom: 15px;
@@ -179,16 +180,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 2;
-        }
-
-        .img-fallback-icon {
-            font-size: 50px;
-            color: rgba(255, 255, 255, 0.2);
-            z-index: 1;
         }
 
         .product-card h3 { font-size: 19px; font-weight: 700; margin-bottom: 4px; color: #fff; }
@@ -230,25 +221,25 @@
             color: #000 !important;
         }
 
-        /* FIXED CORNER CIRCLE BUTTONS */
+        /* FIXED CORNER CIRCLE BUTTONS (Call, Insta, WhatsApp) */
         .floating-action-group {
             position: fixed;
             bottom: 25px;
             right: 20px;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
             z-index: 99999;
         }
 
         .circle-btn {
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 26px;
+            font-size: 24px;
             color: white;
             text-decoration: none;
             box-shadow: 0 4px 20px rgba(0,0,0,0.6);
@@ -256,6 +247,7 @@
         }
 
         .btn-call { background: #00f2fe; color: #000; border: 2px solid #fff; }
+        .btn-instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border: 2px solid #fff; }
         .btn-whatsapp { background: #25d366; border: 2px solid #fff; }
         .circle-btn:hover { transform: scale(1.15); }
 
@@ -264,7 +256,7 @@
                 grid-template-columns: repeat(2, 1fr) !important;
                 gap: 12px !important;
             }
-            .img-container { height: 140px; }
+            .img-container { height: 160px; }
             .product-card h3 { font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
             .product-card p { font-size: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
             .price { font-size: 17px; }
@@ -279,7 +271,7 @@
         <button class="login-btn">Login</button>
     </header>
 
-    <!-- Moving Slider (Exact matching your uploaded .jpg files) -->
+    <!-- Moving Slider (Sari 10 Photos ka Loop) -->
     <div class="slider-container">
         <div class="slider-track">
             <div class="slide-item"><img src="IMG-20260718-WA0057.jpg" alt="Vape"></div>
@@ -287,6 +279,11 @@
             <div class="slide-item"><img src="IMG-20260718-WA0059.jpg" alt="Vape"></div>
             <div class="slide-item"><img src="IMG-20260718-WA0060.jpg" alt="Vape"></div>
             <div class="slide-item"><img src="IMG-20260718-WA0061.jpg" alt="Vape"></div>
+            <div class="slide-item"><img src="IMG-20260718-WA0062.jpg" alt="Vape"></div>
+            <div class="slide-item"><img src="IMG-20260718-WA0063.jpg" alt="Vape"></div>
+            <div class="slide-item"><img src="IMG-20260718-WA0064.jpg" alt="Vape"></div>
+            <div class="slide-item"><img src="IMG-20260718-WA0065.jpg" alt="Vape"></div>
+            <div class="slide-item"><img src="IMG-20260718-WA0066.jpg" alt="Vape"></div>
         </div>
     </div>
 
@@ -300,65 +297,133 @@
             
             <!-- Product 1 -->
             <div class="product-card">
-                <span class="badge">COD Available</span>
+                <span class="badge">Best Seller</span>
                 <div class="img-container">
-                    <i class="fas fa-wind img-fallback-icon"></i>
-                    <img src="IMG-20260718-WA0057.jpg" alt="Crystal Pro Ice">
+                    <img src="IMG-20260718-WA0057.jpg" alt="Elfbar Premium">
                 </div>
-                <h3>Crystal Pro Ice</h3>
-                <p>Smooth Rich Ice Blast</p>
+                <h3>Elfbar Premium</h3>
+                <p>Smooth Rich Blast</p>
                 <div class="price">₹1599</div>
-                <a href="https://wa.me/919996488904?text=Hi, I want to order Crystal Pro Ice" target="_blank" class="order-btn">Order Now</a>
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Elfbar Premium (WA0057)" target="_blank" class="order-btn">Order Now</a>
             </div>
 
             <!-- Product 2 -->
             <div class="product-card">
-                <span class="badge">Trending Now</span>
+                <span class="badge">Trending</span>
                 <div class="img-container">
-                    <i class="fas fa-bolt img-fallback-icon"></i>
-                    <img src="IMG-20260718-WA0058.jpg" alt="Black Gold Turbo">
+                    <img src="IMG-20260718-WA0058.jpg" alt="Oxbar Pod Juice">
                 </div>
-                <h3>Black Gold Turbo</h3>
+                <h3>Oxbar Pod Juice</h3>
                 <p>Intense Thick Clouds</p>
                 <div class="price">₹1750</div>
-                <a href="https://wa.me/919996488904?text=Hi, I want to order Black Gold Turbo" target="_blank" class="order-btn">Order Now</a>
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Oxbar Pod Juice (WA0058)" target="_blank" class="order-btn">Order Now</a>
             </div>
 
             <!-- Product 3 -->
             <div class="product-card">
-                <span class="badge">New Flavour</span>
+                <span class="badge">New Arrival</span>
                 <div class="img-container">
-                    <i class="fas fa-cloud img-fallback-icon"></i>
-                    <img src="IMG-20260718-WA0059.jpg" alt="Cyber Pod X">
+                    <img src="IMG-20260718-WA0059.jpg" alt="Elfbar Grape Smart">
                 </div>
-                <h3>Cyber Pod X</h3>
+                <h3>Elfbar Grape Smart</h3>
                 <p>Futuristic Long Lasting</p>
                 <div class="price">₹1699</div>
-                <a href="https://wa.me/919996488904?text=Hi, I want to order Cyber Pod X" target="_blank" class="order-btn">Order Now</a>
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Elfbar Grape Smart (WA0059)" target="_blank" class="order-btn">Order Now</a>
             </div>
 
             <!-- Product 4 -->
             <div class="product-card">
                 <span class="badge">Top Rated</span>
                 <div class="img-container">
-                    <i class="fas fa-fire img-fallback-icon"></i>
-                    <img src="IMG-20260718-WA0060.jpg" alt="Ultra Max Extreme">
+                    <img src="IMG-20260718-WA0060.jpg" alt="Geek Bar Luxury">
                 </div>
-                <h3>Ultra Max Extreme</h3>
+                <h3>Geek Bar Luxury</h3>
                 <p>Super Smooth Kick</p>
                 <div class="price">₹1850</div>
-                <a href="https://wa.me/919996488904?text=Hi, I want to order Ultra Max Extreme" target="_blank" class="order-btn">Order Now</a>
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Geek Bar Luxury (WA0060)" target="_blank" class="order-btn">Order Now</a>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <span class="badge">Exclusive</span>
+                <div class="img-container">
+                    <img src="IMG-20260718-WA0061.jpg" alt="Premium Vape V5">
+                </div>
+                <h3>Premium Vape V5</h3>
+                <p>Exotic Flavor Fusion</p>
+                <div class="price">₹1650</div>
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Premium Vape V5 (WA0061)" target="_blank" class="order-btn">Order Now</a>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <span class="badge">Limited Edition</span>
+                <div class="img-container">
+                    <img src="IMG-20260718-WA0062.jpg" alt="Premium Vape V6">
+                </div>
+                <h3>Premium Vape V6</h3>
+                <p>High Performance Pod</p>
+                <div class="price">₹1799</div>
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Premium Vape V6 (WA0062)" target="_blank" class="order-btn">Order Now</a>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card">
+                <span class="badge">Hot Product</span>
+                <div class="img-container">
+                    <img src="IMG-20260718-WA0063.jpg" alt="Premium Vape V7">
+                </div>
+                <h3>Premium Vape V7</h3>
+                <p>Rich Flavor Experience</p>
+                <div class="price">₹1550</div>
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Premium Vape V7 (WA0063)" target="_blank" class="order-btn">Order Now</a>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card">
+                <span class="badge">Special Offer</span>
+                <div class="img-container">
+                    <img src="IMG-20260718-WA0064.jpg" alt="Premium Vape V8">
+                </div>
+                <h3>Premium Vape V8</h3>
+                <p>Smooth Nic Salt Hit</p>
+                <div class="price">₹1699</div>
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Premium Vape V8 (WA0064)" target="_blank" class="order-btn">Order Now</a>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="product-card">
+                <span class="badge">Super Deal</span>
+                <div class="img-container">
+                    <img src="IMG-20260718-WA0065.jpg" alt="Premium Vape V9">
+                </div>
+                <h3>Premium Vape V9</h3>
+                <p>Thick Smooth Flavor</p>
+                <div class="price">₹1750</div>
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Premium Vape V9 (WA0065)" target="_blank" class="order-btn">Order Now</a>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="product-card">
+                <span class="badge">Premium Choice</span>
+                <div class="img-container">
+                    <img src="IMG-20260718-WA0066.jpg" alt="Premium Vape V10">
+                </div>
+                <h3>Premium Vape V10</h3>
+                <p>Ultimate Cloud Machine</p>
+                <div class="price">₹1899</div>
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Premium Vape V10 (WA0066)" target="_blank" class="order-btn">Order Now</a>
             </div>
 
         </div>
     </section>
 
-    <!-- FLOATING ACTION GROUP (CIRCLE CORNER BUTTONS) -->
+    <!-- FLOATING ACTION GROUP (Call, Insta, WhatsApp) -->
     <div class="floating-action-group">
         <a href="tel:+919996488904" class="circle-btn btn-call"><i class="fas fa-phone-alt"></i></a>
+        <a href="https://www.instagram.com/vip_vape_lounge01/" target="_blank" class="circle-btn btn-instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://wa.me/919996488904" target="_blank" class="circle-btn btn-whatsapp"><i class="fab fa-whatsapp"></i></a>
     </div>
 
 </body>
 </html>
- 
