@@ -19,16 +19,16 @@
             background: radial-gradient(circle at center, #0c0814 0%, #030207 100%);
             color: #ffffff;
             overflow-x: hidden;
-            padding-bottom: 90px;
+            padding-bottom: 100px;
         }
 
-        /* DYNAMIC NEON HEADER */
+        /* PREMIUM DYNAMIC HEADER */
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 18px 8%;
-            background: rgba(10, 6, 18, 0.92);
+            background: rgba(10, 6, 18, 0.95);
             border-bottom: 2px solid #ff007f;
             box-shadow: 0 0 20px rgba(255, 0, 127, 0.4);
             position: sticky;
@@ -63,15 +63,14 @@
             border: none;
             cursor: pointer;
             box-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
-            transition: 0.3s ease;
         }
 
-        /* PHOTO ANIMATION SLIDER */
+        /* REAL VAPE ANIMATION CORRIDOR SLIDER */
         .slider-container {
             width: 100%;
             overflow: hidden;
             background: rgba(20, 15, 35, 0.6);
-            padding: 20px 0;
+            padding: 15px 0;
             border-top: 1px solid #ff007f;
             border-bottom: 1px solid #00f2fe;
         }
@@ -79,19 +78,18 @@
         .slider-track {
             display: flex;
             width: calc(280px * 12);
-            animation: scrollHorizontal 20s linear infinite;
+            animation: scrollHorizontal 25s linear infinite;
             gap: 20px;
         }
 
         .slide-item {
             width: 260px;
-            height: 160px;
+            height: 150px;
             flex-shrink: 0;
             border-radius: 16px;
             overflow: hidden;
             border: 2px solid #ff007f;
             box-shadow: 0 0 15px rgba(255, 0, 127, 0.3);
-            background: #150f24;
         }
 
         .slide-item img {
@@ -105,10 +103,10 @@
             100% { transform: translateX(calc(-280px * 6)); }
         }
 
-        /* HERO SECTION */
+        /* HERO TEXT */
         .hero-text-section {
             text-align: center;
-            padding: 40px 8% 20px 8%;
+            padding: 35px 8% 15px 8%;
         }
 
         .hero-text-section h1 {
@@ -127,7 +125,7 @@
             letter-spacing: 2px;
         }
 
-        /* PRODUCTS GRID */
+        /* PRODUCTS CONTAINER */
         .products-section { padding: 10px 8%; text-align: center; }
 
         .products-grid {
@@ -146,10 +144,7 @@
             transition: all 0.4s ease;
         }
 
-        .product-card:hover {
-            transform: translateY(-8px);
-        }
-
+        .product-card:hover { transform: translateY(-8px); }
         .product-card:nth-child(2n+1):hover { border-color: #ff007f; box-shadow: 0 0 20px rgba(255, 0, 127, 0.5); }
         .product-card:nth-child(2n+2):hover { border-color: #00ffcc; box-shadow: 0 0 20px rgba(0, 255, 204, 0.5); }
 
@@ -174,7 +169,6 @@
             margin-bottom: 15px;
             background: #090611;
             border: 1px solid #3c2a66;
-            position: relative;
         }
 
         .img-container img {
@@ -184,9 +178,7 @@
             transition: transform 0.5s ease;
         }
 
-        .product-card:hover .img-container img {
-            transform: scale(1.1);
-        }
+        .product-card:hover .img-container img { transform: scale(1.1); }
 
         .product-card h3 { font-size: 19px; font-weight: 700; margin-bottom: 4px; color: #fff; }
         .product-card p { font-size: 12px; color: #a496bd; margin-bottom: 14px; }
@@ -227,7 +219,7 @@
             color: #000 !important;
         }
 
-        /* FIXED CIRCLE ACTION BUTTONS CORNER */
+        /* FIXED CORNER CIRCLE BUTTONS WITH LABELS FOR SAFETY */
         .floating-action-group {
             position: fixed;
             bottom: 25px;
@@ -249,39 +241,14 @@
             color: white;
             text-decoration: none;
             box-shadow: 0 4px 20px rgba(0,0,0,0.6);
-            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            animation: pulseGlow 2s infinite;
+            transition: transform 0.3s ease;
         }
 
-        @keyframes pulseGlow {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
+        .btn-call { background: #00f2fe; color: #000; border: 2px solid #fff; }
+        .btn-whatsapp { background: #25d366; border: 2px solid #fff; }
+        .circle-btn:hover { transform: scale(1.15); }
 
-        .btn-call {
-            background: #00f2fe;
-            color: #000;
-            border: 2px solid #fff;
-            animation: pulseGlowCall 2s infinite;
-        }
-
-        @keyframes pulseGlowCall {
-            0% { box-shadow: 0 0 0 0 rgba(0, 242, 254, 0.5); }
-            70% { box-shadow: 0 0 0 15px rgba(0, 242, 254, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 242, 254, 0); }
-        }
-
-        .btn-whatsapp {
-            background: #25d366;
-            border: 2px solid #fff;
-        }
-
-        .circle-btn:hover {
-            transform: scale(1.15) rotate(5deg);
-        }
-
-        /* LOGIN POPUP MODAL */
+        /* MODAL */
         .login-modal {
             display: none;
             position: fixed;
@@ -298,7 +265,6 @@
         .modal-content {
             background: #110b21;
             border: 2px solid #ff007f;
-            box-shadow: 0 0 35px rgba(255, 0, 127, 0.5);
             padding: 35px 25px;
             border-radius: 24px;
             width: 90%;
@@ -333,15 +299,15 @@
         <button class="login-btn" onclick="openLogin()">Login</button>
     </header>
 
-    <!-- Photo Animation Corridor Slider (Auto-Backup Images Embedded) -->
+    <!-- Moving Corridor Animation Slider with Real High Quality Vape/Smoke Smoke Images -->
     <div class="slider-container">
         <div class="slider-track">
-            <div class="slide-item"><img src="IMG-20260718-WA0057.jpeg" onerror="this.src='https://images.unsplash.com/photo-1556942040-d99616d25203?w=400&auto=format&fit=crop'" alt="Vape Slide"></div>
-            <div class="slide-item"><img src="IMG-20260718-WA0058.jpeg" onerror="this.src='https://images.unsplash.com/photo-1536637841950-b0ef5fa580bc?w=400&auto=format&fit=crop'" alt="Vape Slide"></div>
-            <div class="slide-item"><img src="IMG-20260718-WA0059.jpeg" onerror="this.src='https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=400&auto=format&fit=crop'" alt="Vape Slide"></div>
-            <div class="slide-item"><img src="IMG-20260718-WA0060.jpeg" onerror="this.src='https://images.unsplash.com/photo-1518173946687-a4c8a3b1f98e?w=400&auto=format&fit=crop'" alt="Vape Slide"></div>
-            <div class="slide-item"><img src="IMG-20260718-WA0061.jpeg" onerror="this.src='https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&auto=format&fit=crop'" alt="Vape Slide"></div>
-            <div class="slide-item"><img src="IMG-20260718-WA0062.jpeg" onerror="this.src='https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&auto=format&fit=crop'" alt="Vape Slide"></div>
+            <div class="slide-item"><img src="https://images.unsplash.com/photo-1556942040-d99616d25203?w=500&auto=format&fit=crop" alt="Vape Mod"></div>
+            <div class="slide-item"><img src="https://images.unsplash.com/photo-1536637841950-b0ef5fa580bc?w=500&auto=format&fit=crop" alt="E-Cigarette"></div>
+            <div class="slide-item"><img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=500&auto=format&fit=crop" alt="Vape Smoke Close Up"></div>
+            <div class="slide-item"><img src="https://images.unsplash.com/photo-1518173946687-a4c8a3b1f98e?w=500&auto=format&fit=crop" alt="Thick Neon Smoke"></div>
+            <div class="slide-item"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&auto=format&fit=crop" alt="Vaping Device"></div>
+            <div class="slide-item"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&auto=format&fit=crop" alt="Premium Pod Mod"></div>
         </div>
     </div>
 
@@ -358,105 +324,81 @@
             <div class="product-card">
                 <span class="badge">COD Available</span>
                 <div class="img-container">
-                    <img src="IMG-20260718-WA0057.jpeg" onerror="this.src='https://images.unsplash.com/photo-1536637841950-b0ef5fa580bc?w=300&auto=format&fit=crop'" alt="Crystal Pro Ice">
+                    <img src="https://images.unsplash.com/photo-1556942040-d99616d25203?w=400&auto=format&fit=crop" alt="Crystal Pro Ice">
                 </div>
                 <h3>Crystal Pro Ice</h3>
                 <p>Smooth Rich Ice Blast</p>
                 <div class="price">₹1599</div>
-                <a href="https://wa.me/919996488904?text=Hi, I want to order Crystal Pro Ice" target="_blank" class="order-btn">Order Now</a>
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Crystal Pro Ice (₹1599)" target="_blank" class="order-btn">Order Now</a>
             </div>
 
             <!-- Product 2 -->
             <div class="product-card">
                 <span class="badge">Trending Now</span>
                 <div class="img-container">
-                    <img src="IMG-20260718-WA0058.jpeg" onerror="this.src='https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=300&auto=format&fit=crop'" alt="Black Gold Turbo">
+                    <img src="https://images.unsplash.com/photo-1536637841950-b0ef5fa580bc?w=400&auto=format&fit=crop" alt="Black Gold Turbo">
                 </div>
                 <h3>Black Gold Turbo</h3>
                 <p>Intense Thick Clouds</p>
                 <div class="price">₹1750</div>
-                <a href="https://wa.me/919996488904?text=Hi, I want to order Black Gold Turbo" target="_blank" class="order-btn">Order Now</a>
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Black Gold Turbo (₹1750)" target="_blank" class="order-btn">Order Now</a>
             </div>
 
             <!-- Product 3 -->
             <div class="product-card">
                 <span class="badge">New Flavour</span>
                 <div class="img-container">
-                    <img src="IMG-20260718-WA0059.jpeg" onerror="this.src='https://images.unsplash.com/photo-1556942040-d99616d25203?w=300&auto=format&fit=crop'" alt="Cyber Pod X">
+                    <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=400&auto=format&fit=crop" alt="Cyber Pod X">
                 </div>
                 <h3>Cyber Pod X</h3>
                 <p>Futuristic Long Lasting</p>
                 <div class="price">₹1699</div>
-                <a href="https://wa.me/919996488904?text=Hi, I want to order Cyber Pod X" target="_blank" class="order-btn">Order Now</a>
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Cyber Pod X (₹1699)" target="_blank" class="order-btn">Order Now</a>
             </div>
 
             <!-- Product 4 -->
             <div class="product-card">
                 <span class="badge">Top Rated</span>
                 <div class="img-container">
-                    <img src="IMG-20260718-WA0060.jpeg" onerror="this.src='https://images.unsplash.com/photo-1518173946687-a4c8a3b1f98e?w=300&auto=format&fit=crop'" alt="Ultra Max Extreme">
+                    <img src="https://images.unsplash.com/photo-1518173946687-a4c8a3b1f98e?w=400&auto=format&fit=crop" alt="Ultra Max Extreme">
                 </div>
                 <h3>Ultra Max Extreme</h3>
                 <p>Super Smooth Kick</p>
                 <div class="price">₹1850</div>
-                <a href="https://wa.me/919996488904?text=Hi, I want to order Ultra Max Extreme" target="_blank" class="order-btn">Order Now</a>
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Ultra Max Extreme (₹1850)" target="_blank" class="order-btn">Order Now</a>
             </div>
 
             <!-- Product 5 -->
             <div class="product-card">
                 <span class="badge">100% Original</span>
                 <div class="img-container">
-                    <img src="IMG-20260718-WA0061.jpeg" onerror="this.src='https://images.unsplash.com/photo-1542751371-adc38448a05e?w=300&auto=format&fit=crop'" alt="Mint Storm Premium">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&auto=format&fit=crop" alt="Mint Storm Premium">
                 </div>
                 <h3>Mint Storm Premium</h3>
                 <p>Pure Fresh Minty Rush</p>
                 <div class="price">₹1550</div>
-                <a href="https://wa.me/919996488904?text=Hi, I want to order Mint Storm Premium" target="_blank" class="order-btn">Order Now</a>
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Mint Storm Premium (₹1550)" target="_blank" class="order-btn">Order Now</a>
             </div>
 
             <!-- Product 6 -->
             <div class="product-card">
                 <span class="badge">VIP Luxury</span>
                 <div class="img-container">
-                    <img src="IMG-20260718-WA0062.jpeg" onerror="this.src='https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=300&auto=format&fit=crop'" alt="Royal Velvet Edition">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&auto=format&fit=crop" alt="Royal Velvet Edition">
                 </div>
                 <h3>Royal Velvet Edition</h3>
                 <p>Premium Glossy Finish</p>
                 <div class="price">₹1950</div>
-                <a href="https://wa.me/919996488904?text=Hi, I want to order Royal Velvet Edition" target="_blank" class="order-btn">Order Now</a>
-            </div>
-
-            <!-- Product 7 -->
-            <div class="product-card">
-                <span class="badge">Heavy Smoke</span>
-                <div class="img-container">
-                    <img src="IMG-20260718-WA0063.jpeg" onerror="this.src='https://images.unsplash.com/photo-1518173946687-a4c8a3b1f98e?w=300&auto=format&fit=crop'" alt="Titanium Smoke V4">
-                </div>
-                <h3>Titanium Smoke V4</h3>
-                <p>Heavy Duty Beast Mode</p>
-                <div class="price">₹1899</div>
-                <a href="https://wa.me/919996488904?text=Hi, I want to order Titanium Smoke V4" target="_blank" class="order-btn">Order Now</a>
-            </div>
-
-            <!-- Product 8 -->
-            <div class="product-card">
-                <span class="badge">Exotic Juice</span>
-                <div class="img-container">
-                    <img src="IMG-20260718-WA0064.jpeg" onerror="this.src='https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=300&auto=format&fit=crop'" alt="Mystic Blue Vapor">
-                </div>
-                <h3>Mystic Blue Vapor</h3>
-                <p>Delicious Mixed Fruits</p>
-                <div class="price">₹1600</div>
-                <a href="https://wa.me/919996488904?text=Hi, I want to order Mystic Blue Vapor" target="_blank" class="order-btn">Order Now</a>
+                <a href="https://wa.me/919996488904?text=Hi, I want to order Royal Velvet Edition (₹1950)" target="_blank" class="order-btn">Order Now</a>
             </div>
 
         </div>
     </section>
 
-    <!-- FLOATING ACTION GROUP (CIRCLE BUTTONS AT BOTTOM RIGHT CORNER) -->
+    <!-- FLOATING ACTION GROUP (CIRCLE CORNER BUTTONS) -->
     <div class="floating-action-group">
-        <a href="tel:+919996488904" class="circle-btn btn-call" title="Call Us Now"><i class="fas fa-phone-alt"></i></a>
-        <a href="https://wa.me/919996488904" target="_blank" class="circle-btn btn-whatsapp" title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:+919996488904" class="circle-btn btn-call" title="Call Us"><i class="fas fa-phone-alt"></i></a>
+        <a href="https://wa.me/919996488904" target="_blank" class="circle-btn btn-whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
 
     <!-- LOGIN MODAL -->
