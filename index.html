@@ -13,10 +13,11 @@
     <!-- Header Section -->
     <header class="header">
         <div class="logo">
-            💨 <span>VAPE SHOP</span>
+            <img src="images/IMG-20260718-WA0006.jpg" alt="Vape Shop Logo" class="logo-img" style="display:none;"> <!-- Agar logo image ho to src badal dena -->
+            <div class="logo-text"><i class="fas fa-wind" style="color: #ffcc00; margin-right: 5px;"></i><span>VAPE</span> SHOP</div>
         </div>
         <nav>
-            <a href="#">Home</a>
+            <a href="#" class="active">Home</a>
             <a href="#products">Products</a>
             <a href="#offers">Offers</a>
             <a href="#contact">Contact</a>
@@ -27,7 +28,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">
-            <h1>Premium Vape<br>For Every Vibe</h1>
+            <h1>Premium Vape<br><span class="highlight-text">For Every Vibe</span></h1>
             <p>Top Quality • Best Flavours • Trusted Shop</p>
             <div class="hero-buttons">
                 <a href="#products" class="btn btn-yellow"><i class="fas fa-shopping-bag"></i> Shop Now</a>
@@ -35,7 +36,6 @@
             </div>
         </div>
         <div class="hero-image">
-            <!-- Aap yahan apni banner image ka sahi path dal sakte hain -->
             <img src="images/IMG-20260718-WA0006.jpg" alt="Vape Banner">
         </div>
     </section>
@@ -43,12 +43,13 @@
     <!-- Features Section -->
     <section class="cards-features">
         <div class="feature-card">
-            <i class="fas fa-shield-alt icon-yellow"></i>
+            <i class="far fa-shield-check icon-yellow"></i>
             <div>
                 <h3>100% Original</h3>
                 <p>Genuine Products</p>
             </div>
         </div>
+        <div class="feature-separator"></div>
         <div class="feature-card">
             <i class="fas fa-bolt icon-yellow"></i>
             <div>
@@ -56,8 +57,9 @@
                 <p>Across India</p>
             </div>
         </div>
+        <div class="feature-separator"></div>
         <div class="feature-card">
-            <i class="fas fa-headset icon-yellow"></i>
+            <i class="fal fa-headset icon-yellow"></i>
             <div>
                 <h3>24×7 Support</h3>
                 <p>Always Available</p>
@@ -70,69 +72,112 @@
         <h2 class="section-title">🔥 Best Selling Deals</h2>
         <p class="section-subtitle">Limited Time Offers – Grab Now!</p>
 
-        <div class="products-container">
-            <!-- Card 1 -->
+        <div class="products-grid">
+            
+            <!-- Card 1 (Image 1) -->
             <div class="product-card">
                 <span class="badge">2 PCS</span>
-                <img src="images/IMG-20260718-WA0008.jpg" alt="Premium Vape Duo">
+                <div class="img-container"><img src="images/IMG-20260718-WA0006.jpg" alt="Premium Vape Duo"></div>
                 <h3>Premium Vape Duo</h3>
                 <p>High Performance Pods</p>
-                <div class="price">₹1399</div>
-                <!-- Yeh button direct aapke WhatsApp par product ka naam lekar message bhejega -->
-                <a href="https://wa.me/919996488904?text=Hi,%20I%20want%20to%20order%20Premium%20Vape%20Duo" target="_blank" class="order-btn">
+                <div class="price">₹1799</div>
+                <a href="https://wa.me/919996488904?text=Hi,%20I%20want%20to%20order%20Premium%20Vape%20Duo%20(Rs%201799)" target="_blank" class="order-btn">
                     <i class="fas fa-shopping-cart"></i> Order Now
                 </a>
             </div>
 
-            <!-- Card 2 -->
+            <!-- Card 2 (Image 2) -->
             <div class="product-card">
                 <span class="badge">2 PCS</span>
-                <img src="images/IMG-20260718-WA0009.jpg" alt="Pro Max Combo">
+                <div class="img-container"><img src="images/IMG-20260718-WA0008.jpg" alt="Pro Max Combo"></div>
                 <h3>Pro Max Combo</h3>
                 <p>Smooth Flavour | Long Life</p>
-                <div class="price">₹1499</div>
-                <a href="https://wa.me/919996488904?text=Hi,%20I%20want%20to%20order%20Pro%20Max%20Combo" target="_blank" class="order-btn">
+                <div class="price">₹1550</div>
+                <a href="https://wa.me/919996488904?text=Hi,%20I%20want%20to%20order%20Pro%20Max%20Combo%20(Rs%201550)" target="_blank" class="order-btn">
                     <i class="fas fa-shopping-cart"></i> Order Now
                 </a>
             </div>
 
-            <!-- Card 3 -->
+            <!-- Card 3 (Image 3) -->
             <div class="product-card">
                 <span class="badge">2 PCS</span>
-                <img src="images/IMG-20260718-WA0010.jpg" alt="Ultra Power Pack">
+                <div class="img-container"><img src="images/IMG-20260718-WA0009.jpg" alt="Ultra Power Pack"></div>
                 <h3>Ultra Power Pack</h3>
                 <p>More Clouds | More Power</p>
-                <div class="price">₹1699</div>
-                <a href="https://wa.me/919996488904?text=Hi,%20I%20want%20to%20order%20Ultra%20Power%20Pack" target="_blank" class="order-btn">
+                <div class="price">₹1599</div>
+                <a href="https://wa.me/919996488904?text=Hi,%20I%20want%20to%20order%20Ultra%20Power%20Pack%20(Rs%201599)" target="_blank" class="order-btn">
                     <i class="fas fa-shopping-cart"></i> Order Now
                 </a>
             </div>
+
+            <!-- Card 4 (Image 4) -->
+            <div class="product-card">
+                <span class="badge">2 PCS</span>
+                <div class="img-container"><img src="images/IMG-20260718-WA0010.jpg" alt="Vape Classic Pro"></div>
+                <h3>Vape Classic Pro</h3>
+                <p>Rich Taste & Durable</p>
+                <div class="price">₹1800</div>
+                <a href="https://wa.me/919996488904?text=Hi,%20I%20want%20to%20order%20Vape%20Classic%20Pro%20(Rs%201800)" target="_blank" class="order-btn">
+                    <i class="fas fa-shopping-cart"></i> Order Now
+                </a>
+            </div>
+
+            <!-- Card 5 (Image 5) -->
+            <div class="product-card">
+                <span class="badge">2 PCS</span>
+                <div class="img-container"><img src="images/IMG-20260718-WA0011.jpg" alt="Luxury Cloud Edition"></div>
+                <h3>Luxury Cloud Edition</h3>
+                <p>Ultimate Vapor Control</p>
+                <div class="price">₹2499</div>
+                <a href="https://wa.me/919996488904?text=Hi,%20I%20want%20to%20order%20Luxury%20Cloud%20Edition%20(Rs%202499)" target="_blank" class="order-btn">
+                    <i class="fas fa-shopping-cart"></i> Order Now
+                </a>
+            </div>
+
+            <!-- Card 6 (Image 6) -->
+            <div class="product-card">
+                <span class="badge">2 PCS</span>
+                <div class="img-container"><img src="images/IMG-20260718-WA0012.jpg" alt="Titan Master Pack"></div>
+                <h3>Titan Master Pack</h3>
+                <p>Limited Special Edition</p>
+                <div class="price">₹2999</div>
+                <a href="https://wa.me/919996488904?text=Hi,%20I%20want%20to%20order%20Titan%20Master%20Pack%20(Rs%202999)" target="_blank" class="order-btn">
+                    <i class="fas fa-shopping-cart"></i> Order Now
+                </a>
+            </div>
+
         </div>
     </section>
 
     <!-- Need Help / Contact Section -->
-    <section id="contact" class="contact-section">
-        <h2>Need Help? <span class="highlight">Contact Us</span></h2>
-        <p>We are always here to help you!</p>
-        
-        <div class="contact-buttons">
-            <!-- WhatsApp Button -->
-            <a href="https://wa.me/919996488904" target="_blank" class="contact-btn whatsapp-btn">
-                <i class="fab fa-whatsapp"></i>
-                <div>
-                    <span>WhatsApp</span>
-                    <strong>9996488904</strong>
-                </div>
-            </a>
+    <section id="contact" class="contact-box-container">
+        <div class="contact-section">
+            <h2>Need Help? <span class="highlight">Contact Us</span></h2>
+            <p>We are always here to help you!</p>
+            
+            <div class="contact-buttons">
+                <!-- WhatsApp Button -->
+                <a href="https://wa.me/919996488904" target="_blank" class="contact-btn whatsapp-btn">
+                    <div class="contact-btn-inner">
+                        <i class="fab fa-whatsapp"></i>
+                        <div class="btn-text">
+                            <span>WhatsApp</span>
+                            <strong>9996488904</strong>
+                        </div>
+                    </div>
+                </a>
 
-            <!-- Call Button -->
-            <a href="tel:+919996488904" class="contact-btn call-btn">
-                <i class="fas fa-phone-alt"></i>
-                <div>
-                    <span>Call Now</span>
-                    <strong>9996488904</strong>
-                </div>
-            </a>
+                <!-- Call Button -->
+                <a href="tel:+919996488904" class="contact-btn call-btn">
+                    <div class="contact-btn-inner">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="btn-text">
+                            <span>Call Now</span>
+                            <strong>9996488904</strong>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -140,8 +185,8 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-about">
-                <div class="logo">💨 <span>VAPE SHOP</span></div>
-                <p>Your trusted destination for premium vape products. Shop original. Vape better.</p>
+                <div class="logo-text"><i class="fas fa-wind" style="color: #ffcc00; margin-right: 5px;"></i><span>VAPE</span> SHOP</div>
+                <p>Your trusted destination for premium vape products.<br>Shop original. Vape better.</p>
             </div>
             <div class="footer-links">
                 <h3>Quick Links</h3>
